@@ -1,0 +1,30 @@
+.header {
+    padding-top: 200px;
+    width:  70%;
+    margin: auto;
+    .header__container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        .header_container-heading {
+            display: grid;
+            place-self: center;
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: white;
+            .header_container-heading-name {
+                place-self: center;
+                margin-right: -15rem;
+                font-size: 3.5rem;
+                font-weight: 500;
+            }
+        }
+        .header__container-logo {
+            display: grid;
+            justify-items: center;
+            .header__container-logo-image {
+                width: 70%;
+            }
+        }
+    }
+}

@@ -4,12 +4,15 @@ const rename = require('gulp-rename');
 const cleanCSS = require('gulp-clean-css');
 const sass = require('gulp-sass');
 const eslint = require("gulp-eslint");
+const postCSS = require('gulp-postcss');
+const autoprefixer = require('gulp-autoprefixer');
+const plumber = require('gulp-plumber');
 const browsersync = require('browser-sync').create();
 
 function browserSync(done) {
   browsersync.init({
     server: {
-      baseDir: "./src/"
+      baseDir: "./"
     },
     port: 1234
   });
@@ -22,10 +25,14 @@ function browserSyncReload(done) {
 }
 
 function styles() {
-    return gulp.src('./src/sass/*.scss')
-      .pipe(sass().on('error', sass.logError))
-      .pipe(cleanCSS())
-      .pipe(gulp.dest('./dest/styles.css'))
+    return gulp.src('./src/styles/**/*.scss')
+      .pipe(sass({ outputStyle: "expanded" }).on('error', sass.logError))
+      .pipe(gulp.dest('./dest/styles/'))  
+      // .pipe(rename({ suffix: ".min" }))  // COMING SOON
+      // .pipe(autoprefixer())
+      // .pipe(cleanCSS())
+      // .pipe(postCSS())
+      // .pipe(gulp.dest("./dest/styles/"))
       .pipe(browsersync.stream());
 };
 

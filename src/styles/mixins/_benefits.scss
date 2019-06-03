@@ -1,0 +1,36 @@
+.section-benefits {
+    padding: 200px;
+    margin: auto;
+    width: 40%;
+    .section-benefits__list {
+        .section-benefits__list-item {
+            display: grid;
+            grid-template-columns: 35% 65%;
+            justify-items: center;
+
+            background-color: white;
+            box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.3);
+
+            padding: 15px;
+            margin-top: 30px;
+            
+            .section-benefits__list-item-logo {
+                .section-benefits__list-item-logo-image {
+                 width: 200px;
+                } 
+             }
+             .section-benefits__list-item-content {
+                 margin: 10px 50px 10px 30px;
+                 .section-benefits__list-item-content-heading {
+                    text-align: center;
+                    color: rgb(54, 54, 54)
+                 }
+                 .section-benefits__list-item-content-desc {
+                        text-align: justify;
+                        color: rgb(54, 54, 54)
+                        
+                 }
+             }
+        }
+    }
+}

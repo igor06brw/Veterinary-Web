@@ -1,0 +1,31 @@
+.nav-bar {
+        display: grid;
+        grid-template-columns: 25% 75%;
+        align-items: center;
+
+        width: 70%;
+        margin: auto;
+    .nav-bar__logo {
+        display: grid;
+        justify-self: center;
+        .nav-bar__logo-image {
+            display: grid;
+            justify-self: center;
+            width: 100px;
+            height: 100px;
+        }
+    }
+    .nav-bar__menu {
+       display: grid;
+       grid-template-columns: repeat(5, 20%);
+       justify-items: center;
+        
+        .nav-bar__menu-item {
+            list-style: none;
+        }
+        .nav-bar__menu-item-link {
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
