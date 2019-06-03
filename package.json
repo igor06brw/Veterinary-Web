@@ -1,0 +1,25 @@
+{
+  "name": "veterinary-hospital-web",
+  "version": "1.0.0",
+  "description": "Website of veterinary hospital",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Igor Borowski",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "bulma": "^0.7.4",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglify-es": "^1.0.4",
+    "node-sass": "^4.12.0",
+    "gulp-concat": "^2.6.1"
+  }
+}
