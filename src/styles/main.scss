@@ -1,5 +1,10 @@
+@import '../../node_modules/normalize.css/normalize.css';
 @import './mixins/font';
 @import './mixins/body';
+@import './mixins/modular';
 @import './mixins/nav-bar';
 @import './mixins/header';
-@import './mixins/benefits'
+@import './mixins/benefits';
+@import './mixins/about';
+
+@import './mixins/mobile';

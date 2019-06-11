@@ -1,31 +1,50 @@
 .section-benefits {
-    padding: 200px;
+    padding-top: 50px;
     margin: auto;
-    width: 40%;
+    height: 100vh;
+    .section-benefits__text {
+        .section-benefits__text-header {
+        }
+        .section-benefits__text-paragraph {
+        }
+    }
     .section-benefits__list {
-        .section-benefits__list-item {
-            display: grid;
-            grid-template-columns: 35% 65%;
-            justify-items: center;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5%;
 
+        &:nth-child(2){
+            margin-left: 5%;
+        }
+
+        &:last-child {
+            margin-right: 5%;
+        }
+        .section-benefits__list-item {
+            grid-template-columns: 20%;
+            
             background-color: white;
             box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.3);
 
             padding: 15px;
-            margin-top: 30px;
-            
             .section-benefits__list-item-logo {
+                padding: 15px;
+                display: grid;
+                align-items: center;
                 .section-benefits__list-item-logo-image {
-                 width: 200px;
+                    justify-self: center;
+                    width: 60%;
                 } 
              }
              .section-benefits__list-item-content {
                  margin: 10px 50px 10px 30px;
                  .section-benefits__list-item-content-heading {
                     text-align: center;
+                    padding-bottom: 8%;
                     color: rgb(54, 54, 54)
                  }
                  .section-benefits__list-item-content-desc {
+                     padding-bottom: 2%;
                         text-align: justify;
                         color: rgb(54, 54, 54)
                         

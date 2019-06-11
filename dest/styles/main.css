@@ -1,14 +1,40 @@
+@import url(../../node_modules/normalize.css/normalize.css);
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap");
 body {
-  background-color: #c7e9de;
+  background-color: #c0e1e4;
   font-family: 'Lato', sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.common-heading {
+  padding-bottom: 100px;
+}
+
+.common-heading .common-heading__header {
+  text-align: center;
+  color: #fff;
+  font-weight: 300;
+  font-size: 3em;
+}
+
+.common-heading .common-heading__paragraph {
+  text-align: center;
+  color: #fff;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
 .nav-bar {
+  padding: 20px 20% 20px 20%;
   display: grid;
   grid-template-columns: 25% 75%;
   align-items: center;
-  width: 70%;
+  background-color: rgba(0, 0, 0, 0.1);
   margin: auto;
 }
 
@@ -37,12 +63,38 @@ body {
 .nav-bar .nav-bar__menu .nav-bar__menu-item-link {
   text-decoration: none;
   color: white;
+  font-size: 1.2rem;
+  font-weight: 300;
+  transition: all 0.2s ease-out;
+}
+
+.nav-bar .nav-bar__menu .nav-bar__menu-item-link:hover {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.nav-bar .nav-bar__mobile {
+  display: none;
+}
+
+.nav-bar .nav-bar__mobile .nav-bar__mobile-hamburger {
+  border: none;
+  background-color: transparent;
+  display: grid;
+}
+
+.nav-bar .nav-bar__mobile .nav-bar__mobile-hamburger .nav-bar__mobile-hamburger-line {
+  background: #fff;
+  margin: 7px 0;
+  width: 50px;
+  height: 5px;
 }
 
 .header {
-  padding-top: 200px;
+  padding-top: 180px;
   width: 70%;
   margin: auto;
+  height: 100vh;
 }
 
 .header .header__container {
@@ -75,23 +127,41 @@ body {
 }
 
 .section-benefits {
-  padding: 200px;
+  padding-top: 50px;
   margin: auto;
-  width: 40%;
+  height: 100vh;
+}
+
+.section-benefits .section-benefits__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5%;
+}
+
+.section-benefits .section-benefits__list:nth-child(2) {
+  margin-left: 5%;
+}
+
+.section-benefits .section-benefits__list:last-child {
+  margin-right: 5%;
 }
 
 .section-benefits .section-benefits__list .section-benefits__list-item {
-  display: grid;
-  grid-template-columns: 35% 65%;
-  justify-items: center;
+  grid-template-columns: 20%;
   background-color: white;
   box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.3);
   padding: 15px;
-  margin-top: 30px;
+}
+
+.section-benefits .section-benefits__list .section-benefits__list-item .section-benefits__list-item-logo {
+  padding: 15px;
+  display: grid;
+  align-items: center;
 }
 
 .section-benefits .section-benefits__list .section-benefits__list-item .section-benefits__list-item-logo .section-benefits__list-item-logo-image {
-  width: 200px;
+  justify-self: center;
+  width: 60%;
 }
 
 .section-benefits .section-benefits__list .section-benefits__list-item .section-benefits__list-item-content {
@@ -100,10 +170,71 @@ body {
 
 .section-benefits .section-benefits__list .section-benefits__list-item .section-benefits__list-item-content .section-benefits__list-item-content-heading {
   text-align: center;
+  padding-bottom: 8%;
   color: #363636;
 }
 
 .section-benefits .section-benefits__list .section-benefits__list-item .section-benefits__list-item-content .section-benefits__list-item-content-desc {
+  padding-bottom: 2%;
   text-align: justify;
   color: #363636;
+}
+
+@media only screen and (min-width: 961px) {
+  .nav-bar .nav-bar__menu {
+    display: grid;
+  }
+  .nav-bar .nav-bar__mobile {
+    display: none;
+    justify-items: center;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .nav-bar .nav-bar__menu {
+    display: none;
+  }
+  .nav-bar .nav-bar__mobile {
+    display: grid;
+    justify-items: end;
+  }
+  .header {
+    padding-top: 80px;
+    width: 90%;
+  }
+  .header .header__container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .header .header__container .header_container-heading {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+  .header .header__container .header_container-heading .header_container-heading-name {
+    margin: 0;
+  }
+  .section-benefits {
+    padding: 0;
+  }
+  .section-benefits .section-benefits__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5%;
+  }
+  .section-benefits .section-benefits__list .section-benefits__list-item {
+    grid-template-columns: 10%;
+    background-color: white;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .nav-bar .nav-bar__menu {
+    display: none;
+  }
+  .nav-bar .nav-bar__mobile {
+    display: grid;
+  }
 }

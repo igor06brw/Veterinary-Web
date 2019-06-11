@@ -1,0 +1,106 @@
+@media only screen and (min-width: 961px) { 
+    .nav-bar {
+
+        .nav-bar__logo {
+    
+            .nav-bar__logo-image {
+    
+            }
+        }
+        .nav-bar__menu {
+            display: grid;
+            .nav-bar__menu-item {
+            }
+            .nav-bar__menu-item-link {
+            }
+        }
+        .nav-bar__mobile {
+            display: none;
+            justify-items: center;
+        }
+    }
+
+
+}
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    .nav-bar {
+
+        .nav-bar__logo {
+
+            .nav-bar__logo-image {
+
+            }
+        }
+        .nav-bar__menu {
+            display: none;
+            .nav-bar__menu-item {
+            }
+            .nav-bar__menu-item-link {
+            }
+        }
+        .nav-bar__mobile {
+            display: grid;
+            justify-items: end;
+        }
+    }
+    
+    .header {
+        padding-top: 80px;
+        width: 90%;
+        .header__container {
+            display: grid;
+            grid-template-columns: 100%;
+    
+            .header_container-heading {
+                display: grid;
+                justify-items: center;
+                align-items: center;
+               
+                .header_container-heading-name {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .section-benefits {
+        padding: 0;
+        .section-benefits__list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 5%;
+
+            .section-benefits__list-item {
+                grid-template-columns: 10%;
+                
+                background-color: white;
+                box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.3);
+
+                padding: 10px;
+            }
+        }
+    }
+
+
+}
+@media only screen and (max-width: 400px) {
+    .nav-bar {
+
+        .nav-bar__logo {
+
+            .nav-bar__logo-image {
+
+            }
+        }
+        .nav-bar__menu {
+            display: none;
+            .nav-bar__menu-item {
+            }
+            .nav-bar__menu-item-link {
+            }
+        }
+        .nav-bar__mobile {
+            display: grid;
+        }
+    }
+}
